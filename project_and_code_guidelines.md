@@ -62,10 +62,10 @@ Layout files should match the name of the Android components that they are inten
 | Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
-| AdapterView item | ---                    | `item_person.xml`             |
+| AdapterView item | ---                    | `row_person.xml`             |
 | Partial layout   | ---                    | `partial_stats_bar.xml`       |
 
-A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`.
+A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `row_`.
 
 Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `partial_`.
 
@@ -561,16 +561,16 @@ IDs should be prefixed with the name of the element in lowercase underscore. For
 
 | Element            | Prefix            |
 | -----------------  | ----------------- |
-| `TextView`           | `text_`             |
-| `ImageView`          | `image_`            |
-| `Button`             | `button_`           |
-| `Menu`               | `menu_`             |
+| `TextView`           | `text_` /  `txt_`           |
+| `ImageView`          | `image_` /  `img_`           |
+| `Button`             | `button_`   /  `btn_`        |
+| `Menu`               | `menu_`          |
 
 Image view example:
 
 ```xml
 <ImageView
-    android:id="@+id/image_profile"
+    android:id="@+id/img_profile"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 ```
@@ -595,7 +595,6 @@ String names start with a prefix that identifies the section they belong to. For
 | `error_`             | An error message                      |
 | `msg_`               | A regular information message         |
 | `title_`             | A title, i.e. a dialog title          |
-| `action_`            | An action such as "Save" or "Create"  |
 
 
 
